@@ -32,21 +32,21 @@ async function demoMain () {
         // #endregion
 
         // #region READ OPERATION
-        const documents = await collection.find().toArray();
-        console.log(`All documents:`);    
-        documents.length == 0 ? console.log('No data has been stored in the database yet.') : console.log(documents);
+        // const filter = { name: 'John Doe' };
+        // const cursor = await collection.findOne(filter);
+        // console.log(`\nAll documents:`);    
+        // cursor ? console.log(cursor) : console.log('No data has been stored in the database yet.');
         // #endregion
         
         // #region UPDATE OPERATION
-        const lookFor = { name: 'John Doe' };
-        const update = { $set: { age: 31 } };
-        const updatedResult = await collection.updateOne(lookFor, update);
-        console.log(`\nUpdated ${updatedResult.matchedCount} document(s).`);
+        // const update = { $set: { age: 31 } };
+        // const updatedResult = await collection.updateOne(filter, update);
+        // console.log(`\nUpdated ${updatedResult.matchedCount} document(s).`);
         // #endregion
 
         // #region DELETE OPERATION
-        const deletedResult = await collection.deleteOne(lookFor);
-        console.log(`\nDeleted ${deletedResult.deletedCount} document(s).`);
+        // const deletedResult = await collection.deleteOne(filter);
+        // console.log(`\nDeleted ${deletedResult.deletedCount} document(s).`);
         // #endregion
     }
     catch (error) {
